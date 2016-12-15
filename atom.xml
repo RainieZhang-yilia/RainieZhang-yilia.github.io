@@ -3042,9 +3042,9 @@ function tryWorker(){
     </summary>
     
     
-      <category term="octopress" scheme="https://RainieZhang-yilia.github.io/tags/octopress/"/>
-    
       <category term="主题" scheme="https://RainieZhang-yilia.github.io/tags/%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="octopress" scheme="https://RainieZhang-yilia.github.io/tags/octopress/"/>
     
   </entry>
   
