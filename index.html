@@ -140,6 +140,78 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-我的家" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/29/我的家/">我的家</a>
+    </h1>
+  
+
+        <a href="/2017/03/29/我的家/" class="archive-article-date">
+  	<time datetime="2017-03-29T08:57:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-29</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>目标：</p>
+<ul>
+<li>设计一个类，只能生成该类的一个实例</li>
+<li>单例模式</li>
+</ul>
+<p>关键点：</p>
+<ul>
+<li>一个类只有一个实例，这是最基本的</li>
+<li>它必须自行创建这个实例</li>
+<li>它必须自行向整个系统提供这个实例</li>
+</ul>
+<p>实现方式</p>
+<ul>
+<li>懒汉模式（类加载时不初始化）</li>
+<li>饿汉模式（在类加载时就完成了初始化）</li>
+</ul>
+<p>###懒汉式单例模式<br>懒汉模式代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> Singleton;</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazySingleton</span> </span>&#123; </div><div class="line">	    <span class="keyword">private</span> <span class="keyword">static</span> LazySingleton intance = <span class="keyword">null</span>;</div><div class="line">	    	    <span class="function"><span class="keyword">private</span> <span class="title">LazySingleton</span><span class="params">()</span></span></div><div class="line">	    &#123;</div><div class="line">	        </div><div class="line">	    &#125;</div><div class="line">	    </div><div class="line">	    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span></span></div><div class="line">	    &#123;</div><div class="line">	        <span class="keyword">if</span>(intance == <span class="keyword">null</span>)</div><div class="line">	        &#123;</div><div class="line">	            intance = <span class="keyword">new</span> LazySingleton();</div><div class="line">	        &#125;</div><div class="line">	        <span class="keyword">return</span> intance;</div><div class="line">	    &#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>关键点：（代码注释上已给出）</p>
+<ul>
+<li>构造函数定义为私有—不能在别的类中来获取该类的对象，只能在类自身中得到自己的对象</li>
+<li>成员变量为static的，没有初始化—类加载快，但访问类的唯一实例慢，static保证在自身类中获取自身对象</li>
+<li>公开访问点getInstance：public和synchronized的—public保证对外公开，synchronized同步保证多线程时的正确性（因为类变量不是在加载时初始化的）</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/29/我的家/#more">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-diary-2016-1030-1105" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -664,67 +736,6 @@
 
 
   
-    <article id="post-diary-2016-0731-0806" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/07/diary-2016-0731-0806/">旧事 等风来 7.31-8.6</a>
-    </h1>
-  
-
-        <a href="/2016/08/07/diary-2016-0731-0806/" class="archive-article-date">
-  	<time datetime="2016-08-07T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-07</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/assets/blogImg/diary-7.jpg" alt=""></p>
-<p>七月底，去了趟冰雪世界。<br>之前很是期待，因为大半年没滑过雪，上次的情景还历历在目。<br>然而，只有滑冰…挺无趣的，说实话。<br>但期待是个好事<br>所以我也挺期待台风的（什么鬼逻辑？）</p>
-<p>八月初，妮妲过境。</p>
-<p>台风果真会影响人的思考与心绪。<br>以前那次是“黑云压城城欲摧”，如临大敌，跑还来不及<br>但这次甚至连雨点儿都没有<br>我一开始有点怀疑</p>
-<p>又突然想到，产品同学在给我布置大需求时<br>也是这般“暴风雨前的宁静”<br>那我还是跑吧…</p>
-<p>这周失眠严重<br>我想做很多事情，但一起步就感觉身体被枷锁连着<br>在夜晚，这些锁链碰得叮当作响<br>像是银白的蛛网，不断交织重叠。<br>我把佛经背了又背</p>
-<p>台风来的那天晚上<br>吹得窗户好响<br>反而睡得很好<br>可能，妮妲吹走了一些魔障吧</p>
-<p>每一个台风天，都像是我的老朋友。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/旧事/">旧事</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/08/07/diary-2016-0731-0806/#more">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -739,7 +750,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Rainie
+    		&copy; 2017 Rainie
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -791,14 +802,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">html5</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">游戏</a>
               </li>
              
@@ -807,15 +810,27 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">旅行</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">web</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">html5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">coffeescript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">旅行</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -847,15 +862,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">主题</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -875,15 +890,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">药别停</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">coffeescript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">药别停</a>
               </li>
              
               <li class="article-tag-list-item">
